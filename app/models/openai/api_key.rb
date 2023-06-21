@@ -4,7 +4,7 @@
 #
 #  id                :integer          not null, primary key
 #  openai_account_id :integer          not null
-#  content          :string
+#  content           :string
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
 #

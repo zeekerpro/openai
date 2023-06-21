@@ -19,7 +19,7 @@ module Openai
       @account = Account.new(account_params)
 
       if @account.save
-        @account.api_keys.create { content: params[:account][:api_key] }
+        @account.api_keys.create({ content: params[:account][:api_key] })
         render json: @account, status: :created, location: @account
       else
         render json: @account.errors, status: :unprocessable_entity
