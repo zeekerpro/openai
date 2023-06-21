@@ -10,6 +10,6 @@
 #
 module Openai
   class ApiKey < ApplicationRecord
-    belongs_to :account
+    belongs_to :account, foreign_key: :openai_account_id
   end
 end

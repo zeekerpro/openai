@@ -12,7 +12,7 @@
 #
 module Openai
   class Chat < ApplicationRecord
-    belongs_to :api_key
+    belongs_to :api_key, foreign_key: :openai_api_key_id
 
     enum model: {
       gpt_3_5_turbo: 'gpt-3.5-turbo',
