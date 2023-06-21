@@ -15,7 +15,7 @@ module Openai
 
     test "should create api_key" do
       assert_difference("ApiKey.count") do
-        post api_keys_url, params: { api_key: { account_id: @api_key.account_id, constent: @api_key.constent } }, as: :json
+        post api_keys_url, params: { api_key: { account_id: @api_key.account_id, content: @api_key.content } }, as: :json
       end
 
       assert_response :created
@@ -27,7 +27,7 @@ module Openai
     end
 
     test "should update api_key" do
-      patch api_key_url(@api_key), params: { api_key: { account_id: @api_key.account_id, constent: @api_key.constent } }, as: :json
+      patch api_key_url(@api_key), params: { api_key: { account_id: @api_key.account_id, content: @api_key.content } }, as: :json
       assert_response :success
     end
 

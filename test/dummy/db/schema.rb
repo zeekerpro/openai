@@ -19,7 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_02_090913) do
 
   create_table "openai_api_keys", force: :cascade do |t|
     t.integer "openai_account_id", null: false
-    t.string "constent"
+    t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["openai_account_id"], name: "index_openai_api_keys_on_openai_account_id"

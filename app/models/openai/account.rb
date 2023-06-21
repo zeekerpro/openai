@@ -9,5 +9,6 @@
 #
 module Openai
   class Account < ApplicationRecord
+    has_many :api_keys, dependent: :destroy
   end
 end

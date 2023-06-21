@@ -47,7 +47,7 @@ module Openai
 
       # Only allow a list of trusted parameters through.
       def api_key_params
-        params.require(:api_key).permit(:account_id, :constent)
+        params.require(:api_key).permit(:account_id, :content)
       end
   end
 end
