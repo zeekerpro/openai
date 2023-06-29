@@ -14,13 +14,12 @@ module Openai
   class Chat < ApplicationRecord
     belongs_to :api_key, foreign_key: :openai_api_key_id
 
+    # https://platform.openai.com/docs/models/overview
     enum model: {
-      gpt_3_5_turbo: 'gpt-3.5-turbo',
-      gpt_3_5_turbo_0301: 'gpt-3.5-turbo-0301',
+      gpt_3_5_turbo: 'gpt-3.5-turbo',  # default
+      gpt_3_5_turbo_16k: 'gpt-3.5-turbo-16k',
       gpt_4: 'gpt-4',
-      gpt_4_0314: 'gpt-4-0314',
       gpt_4_32k: 'gpt-4-32k',
-      gpt_4_32k_0314: 'gpt-4-32k-0314'
     }
 
     attribute :model, :string, default: 'gpt-3.5-turbo'
